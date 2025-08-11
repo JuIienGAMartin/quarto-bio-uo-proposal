@@ -50,14 +50,17 @@ Include outlines of data collection and data analysis
 Outline any special skills, equipment, or techniques that will be
 required.
 
-In case you want to add a wide table that needs to be on a landscape page you can do like in @tbl-sideway. Have a look at the `qmd` for the code.
+In case you want to add a wide table that needs to be on a landscape page you can simply use a markdown section indicating the landscape format using 
 
-You need to put the table in a pandoc div (delimited by `:::`) indicating the side way rotation
+```md
+::: {landscape}
 
-It also works for figures just use `sidewaysfigure`
-instead of `sidewaystable`
+your text, figure, table in landscape format
 
-::: {.sidewaystable data-latex=""}
+:::
+```
+
+::: {.landscape}
 
 ```{r}
 #| label: tbl-sideway
@@ -135,5 +138,5 @@ subject to change. Usually include a Gantt chart
 
 # References
 
-::: {refs}
+::: {#refs}
 :::
